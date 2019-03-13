@@ -1,8 +1,9 @@
-package jp.egg.fried.groupiesample
+package jp.egg.fried.groupiesample.recyclerviewsample.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
+import jp.egg.fried.groupiesample.R
 
 class MainActivity : AppCompatActivity() {
 

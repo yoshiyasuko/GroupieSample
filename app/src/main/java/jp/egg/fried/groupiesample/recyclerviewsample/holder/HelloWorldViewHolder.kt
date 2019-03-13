@@ -1,4 +1,4 @@
-package jp.egg.fried.groupiesample.holder
+package jp.egg.fried.groupiesample.recyclerviewsample.holder
 
 import android.view.LayoutInflater
 import android.view.View
