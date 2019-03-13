@@ -37,8 +37,8 @@ class RecyclerAdapter(private val context: Context,
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is HelloWorldViewHolder -> {
-            }
+            is HelloWorldViewHolder     -> holder.onBind()
+            is AndroidHelloViewHolder   -> holder.onBind()
         }
     }
 
@@ -47,5 +47,5 @@ class RecyclerAdapter(private val context: Context,
         const val TYPE_ANDROID = 1
     }
 
-    data class Data(val type: Int, val number: Int)
+    data class Data(val type: Int)
 }

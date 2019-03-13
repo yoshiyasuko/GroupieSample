@@ -20,4 +20,6 @@ class AndroidHelloViewHolder private constructor(view: View) : RecyclerView.View
             return AndroidHelloViewHolder(view)
         }
     }
+
+    fun onBind() {  /* 何かViewの操作を行う */ }
 }

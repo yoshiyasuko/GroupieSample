@@ -20,4 +20,6 @@ class HelloWorldViewHolder private constructor(view: View) : RecyclerView.ViewHo
             return HelloWorldViewHolder(view)
         }
     }
+
+    fun onBind() {  /* 何かViewの操作を行う */ }
 }
