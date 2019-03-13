@@ -13,13 +13,17 @@ import jp.egg.fried.groupiesample.R
  * Created by Yoshiyasu on 2019/03/14
  */
 
-class HelloWorldViewHolder private constructor(view: View) : RecyclerView.ViewHolder(view) {
+class HelloWorldViewHolder private constructor(view: View)
+    : RecyclerView.ViewHolder(view) {
     companion object {
-        fun generate(parent: ViewGroup, inflater: LayoutInflater): HelloWorldViewHolder {
-            val view = inflater.inflate(R.layout.hello_world_view, parent)
+        fun generate(parent: ViewGroup,
+                     inflater: LayoutInflater): HelloWorldViewHolder {
+            val view = inflater.inflate(R.layout.hello_world_view, parent, false)
             return HelloWorldViewHolder(view)
         }
     }
 
-    fun onBind() {  /* 何かViewの操作を行う */ }
+    fun onBind() {
+
+    }
 }

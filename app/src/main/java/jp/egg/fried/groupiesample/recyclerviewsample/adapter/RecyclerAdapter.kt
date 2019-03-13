@@ -15,7 +15,7 @@ import jp.egg.fried.groupiesample.recyclerviewsample.holder.HelloWorldViewHolder
  */
 
 class RecyclerAdapter(private val context: Context,
-                      private val items: MutableList<Any>)
+                      private val items: MutableList<out Any>)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemCount(): Int = items.size
@@ -25,7 +25,10 @@ class RecyclerAdapter(private val context: Context,
         return item.type
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    // RecyclerAdapter
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
+            : RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(context)
 
         return when (viewType) {
@@ -35,7 +38,8 @@ class RecyclerAdapter(private val context: Context,
         }
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder,
+                                  position: Int) {
         when (holder) {
             is HelloWorldViewHolder     -> holder.onBind()
             is AndroidHelloViewHolder   -> holder.onBind()

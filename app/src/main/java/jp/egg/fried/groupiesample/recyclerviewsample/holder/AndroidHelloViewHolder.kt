@@ -16,7 +16,7 @@ import jp.egg.fried.groupiesample.R
 class AndroidHelloViewHolder private constructor(view: View) : RecyclerView.ViewHolder(view) {
     companion object {
         fun generate(parent: ViewGroup, inflater: LayoutInflater): AndroidHelloViewHolder {
-            val view = inflater.inflate(R.layout.android_hello_view, parent)
+            val view = inflater.inflate(R.layout.android_hello_view, parent, false)
             return AndroidHelloViewHolder(view)
         }
     }
