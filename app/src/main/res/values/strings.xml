@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">GroupieSample</string>
+    <string name="activity_main_title">RecyclerViewSample</string>
+    <string name="activity_groupie_title">GroupieSample</string>
     <string name="hello_world">Hello, world !!!</string>
     <string name="android_hello">Android, Hello !!!</string>
 </resources>

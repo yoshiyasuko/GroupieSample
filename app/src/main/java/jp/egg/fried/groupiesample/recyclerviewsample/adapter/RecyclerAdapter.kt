@@ -18,6 +18,12 @@ class RecyclerAdapter(private val context: Context,
                       private val items: MutableList<out Any>)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    interface OnClickListener {
+        fun onClick()
+    }
+
+    var listener: OnClickListener? = null
+
     override fun getItemCount(): Int = items.size
 
     override fun getItemViewType(position: Int): Int {
@@ -41,7 +47,7 @@ class RecyclerAdapter(private val context: Context,
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder,
                                   position: Int) {
         when (holder) {
-            is HelloWorldViewHolder     -> holder.onBind()
+            is HelloWorldViewHolder     -> holder.onBind(listener)
             is AndroidHelloViewHolder   -> holder.onBind()
         }
     }

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import jp.egg.fried.groupiesample.R
+import jp.egg.fried.groupiesample.recyclerviewsample.adapter.RecyclerAdapter
 
 
 /**
@@ -15,6 +16,7 @@ import jp.egg.fried.groupiesample.R
 
 class HelloWorldViewHolder private constructor(view: View)
     : RecyclerView.ViewHolder(view) {
+
     companion object {
         fun generate(parent: ViewGroup,
                      inflater: LayoutInflater): HelloWorldViewHolder {
@@ -23,7 +25,9 @@ class HelloWorldViewHolder private constructor(view: View)
         }
     }
 
-    fun onBind() {
-
+    fun onBind(listener: RecyclerAdapter.OnClickListener?) {
+        itemView.setOnClickListener {
+            listener?.onClick()
+        }
     }
 }

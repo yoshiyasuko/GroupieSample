@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.GroupieActivity">
+        <activity android:name="jp.egg.fried.groupiesample.groupiesample.activity.GroupieActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
